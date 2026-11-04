@@ -476,8 +476,9 @@
 
     .cookie-copy {
       position: relative;
-      z-index: 2;
+      z-index: 4;
       margin-top: auto;
+      pointer-events: none;
     }
 
     .cookie-copy .kicker {
@@ -523,7 +524,8 @@
 
     .cookie-arcade-link {
       position: relative;
-      z-index: 4;
+      z-index: 1;
+      pointer-events: auto;
       color: var(--dim);
       font-size: 0.56rem;
       font-weight: 650;
