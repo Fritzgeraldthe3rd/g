@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#120d12">
+  <title>Cookie Umpire — Game Vault</title>
+  <style>
+    :root {
+      --bg: #120d12;
+      --cream: #f8ecd9;
+      --muted: #c8b49e;
+      --amber: #f3b45f;
+      --line: rgba(248, 236, 217, 0.14);
+      --ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--cream);
+      font-family: var(--ui);
+      background: var(--bg);
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      height: 46px;
+      padding: 0 13px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #1d151b, #160f14);
+    }
+
+    .bar-left,
+    .bar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .back {
+      color: var(--cream);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .back span { color: var(--amber); }
+
+    .back:hover { color: var(--amber); }
+    .back:focus-visible,
+    .standalone:focus-visible {
+      outline: 2px solid rgba(243, 180, 95, 0.75);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .divider {
+      width: 1px;
+      height: 17px;
+      background: var(--line);
+    }
+
+    .label {
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 0.62rem;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .label strong {
+      color: var(--cream);
+      font-weight: 700;
+    }
+
+    .badge {
+      flex: none;
+      padding: 3px 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--amber);
+      font-size: 0.45rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .standalone {
+      color: var(--amber);
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .standalone:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    .stage {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 46px);
+      height: calc(100dvh - 46px);
+      background: #0b080b;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #0b080b;
+    }
+
+    @media (max-width: 520px) {
+      .bar { height: 44px; padding: 0 10px; }
+      .label .label-long { display: none; }
+      .badge { display: none; }
+      .standalone { font-size: 0.54rem; }
+      .stage {
+        height: calc(100vh - 44px);
+        height: calc(100dvh - 44px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-left">
+      <a class="back" href="../"><span aria-hidden="true">←</span> Game Vault</a>
+      <span class="divider" aria-hidden="true"></span>
+      <span class="label"><strong>Cookie Umpire</strong> <span class="label-long">· cookie clicker</span></span>
+    </div>
+    <div class="bar-right">
+      <span class="badge">Published build</span>
+      <a class="standalone" href="https://hrw233.github.io/cookieumpire/" target="_blank" rel="noopener noreferrer">Open standalone <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="stage">
+    <iframe
+      src="https://hrw233.github.io/cookieumpire/"
+      title="Cookie Umpire — cookie clicker"
+      allow="fullscreen; clipboard-write"
+      loading="eager"
+    ></iframe>
+  </main>
+</body>
+</html>
